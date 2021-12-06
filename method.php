@@ -18,7 +18,7 @@ class Method{
     //データベースに登録する
     public function insert(){
         $sql = "INSERT INTO member(id, name, furigana, sex, email, address, addDay)VALUES(NULL, :name, :furigana, :sex, :email, :address, :addDay)";
-        $stmt = $dbh->prepare($sql);
+        //$stmt = $dbh->prepare($sql);
     }
     //登録完了画面
     public function completeProfile(){
