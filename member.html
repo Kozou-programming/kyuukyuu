@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Member</title>
+</head>
+
+<body>
+    <!-- 入力画面 -->
+    <h2>新規会員登録</h2>
+    <form class="profile" action="member.php" method="post">
+        <label>パスワード：</label>
+        <input type="text" name="password" placeholder="英数字で入力してください">
+        <label>確認用パスワード：</label>
+        <input type="text" name="password2" placeholder="同じパスワードを入力してください"><br>
+        <label>姓：</label>
+        <input type="text" name="firstName" placeholder="山田">
+        <label>名：</label><input type="text" name="lastName" placeholder="太郎"><br>
+        <label>フリガナ（姓）：</label><input type="text" name="furiganaFirstName" placeholder="ヤマダ">
+        <label>フリガナ（名）：</label><input type="text" name="furiganaLastName" placeholder="タロウ"><br>
+        <label>郵便番号：</label>
+        <input type="text" name="houseNumber" placeholder="ハイフンは入力しないでください"><br>
+        <label>住所１：</label>
+        <input type="text" name="address1" placeholder="東京都"><br>
+        <label>住所２：</label>
+        <input type="text" name="address2" placeholder="千代田区"><br>
+        <label>住所３：</label>
+        <input type="text" name="address3" placeholder="神田神保町"><br>
+        <label>電話番号</label>
+        <input type="tel" name="tel"><br>
+        <label>Email</label>
+        <input type="mail" name="email">
+        <p class="button">
+            <input type="submit" value="確認する">
+        </p>
+
+    </form>
+
+</body>
+
+</html>

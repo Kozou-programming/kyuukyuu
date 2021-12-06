@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.wrapper{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 4%;
+        justify-content: space-between;
+    }
+h2{
+    color: rgb(0, 9, 128);
+}
+.button{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    
+
+}
+table.member{
+    border-collapse: collapse;
+    border:1px solid #333;
+    }
+table.member th{
+        border: 1px solid black;
+    }
+table.member td{
+    border: 1px solid black;
+}
