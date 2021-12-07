@@ -12,7 +12,7 @@
 <body>
     <!-- 入力画面 -->
     <h2>新規会員登録</h2>
-    <form class="profile" action="member.php" method="post">
+    <form class="profile" action="member.php" method="post" >
         <label>パスワード：</label>
         <input type="text" name="password" placeholder="英数字で入力してください">
         <label>確認用パスワード：</label>
@@ -22,6 +22,10 @@
         <label>名：</label><input type="text" name="lastName" placeholder="太郎"><br>
         <label>フリガナ（姓）：</label><input type="text" name="furiganaFirstName" placeholder="ヤマダ">
         <label>フリガナ（名）：</label><input type="text" name="furiganaLastName" placeholder="タロウ"><br>
+        <label>性別：</label>
+        <input type="radio" name="sex" value="男" checked>男
+        <input type="radio" name="sex" value="女">女
+        <input type="radio" name="sex" value="その他">その他
         <label>郵便番号：</label>
         <input type="text" name="houseNumber" placeholder="ハイフンは入力しないでください"><br>
         <label>住所１：</label>

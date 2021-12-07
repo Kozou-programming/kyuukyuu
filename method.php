@@ -17,12 +17,21 @@ class Method{
     }
     //データベースに登録する
     public function insert(){
-        $sql = "INSERT INTO member(id, name, furigana, sex, email, address, addDay)VALUES(NULL, :name, :furigana, :sex, :email, :address, :addDay)";
+        $result="";
+        if(isset($POST['add'])) {
+        $sql = "INSERT INTO member(id, password, firstName, lastName, furiganaFirstName, furiganaLastName,sex, houseNumber, address1, address2, address3, tel, email, addDay)VALUES(NULL, :password, :firstName, :lastName, :furiganaFirstName, :furiganaLastName,:sex, :houseNumber, :address1, :address2, :address3, :tel, :email, :addDay)";
+        }
         //$stmt = $dbh->prepare($sql);
     }
     //登録完了画面
-    public function completeProfile(){
-        echo '登録しました';
+    public function answer(){
+        $answer="";
+        if($answer=$_POST['member']){
+            echo "ご登録ありがとうございました。";
+        }
+        elseif($answer=$_POST['']){
+            echo "送信が完了しました。";
+        }
     }
 }
 ?>

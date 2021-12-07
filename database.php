@@ -9,9 +9,11 @@ try {
     PDO::ATTR_EMULATE_PREPARES => false,
     PDO::MYSQL_ATTR_MULTI_STATEMENTS => false
     ];
-    $dbh = new PDO('mysql:host=localhost;dbname=kyuukyuu_db', $user, $password, $opt);
+    $dbh = new PDO('mysql:host=localhost;dbname=kyuukyuu', $user, $password, $opt);
+
+    
     //会員情報を表示
-    $sql = 'SELECT id, name, furigana, sex, email, address, addDay FROM member';
+    $sql = 'SELECT * FROM member';
     $statement = $dbh->query($sql);
     while($row = $statement->fetch()){
         echo str($row[0]);
@@ -22,9 +24,14 @@ try {
         echo str($row[5]);
         echo str($row[6]);
         echo str($row[7]);
-        echo str($row[8])."<br>";
+        echo str($row[8]);
+        echo str($row[9]);
+        echo str($row[10]);
+        echo str($row[11]);
+        echo str($row[12]);
+        echo str($row[13])."<br>";
     }
 }catch(PDOException $e){
-    echo "エラー"."<br>";
+    echo "エラー".str($e->getMessage())."<br>";
     exit;
 }
