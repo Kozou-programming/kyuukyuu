@@ -5,11 +5,11 @@ try {
     $dbh = db_open();
     
     //会員情報を挿入
-    $sql = "INSERT INTO member(id, password, firstName, lastName, furiganaFirstName, furiganaLastName,sex, houseNumber, address1, address2, address3, tel, email, addDay)VALUES(NULL, :password, :firstName, :lastName, :furiganaFirstName, :furiganaLastName,:sex, :houseNumber, :address1, :address2, :address3, :tel, :email, :addDay)";
+    $sql = "INSERT INTO member(id, pass, firstName, lastName, furiganaFirstName, furiganaLastName,sex, houseNumber, address1, address2, address3, tel, email, addDay)VALUES(NULL, :pass, :firstName, :lastName, :furiganaFirstName, :furiganaLastName,:sex, :houseNumber, :address1, :address2, :address3, :tel, :email, :addDay)";
     $stmt = $dbh->prepare($sql);
 
     //入力情報をプレースホルダーに挿入
-    $stmt->bindParam(":password", $_POST['password'], PDO::PARAM_STR);
+    $stmt->bindParam(":pass", $_POST['pass'], PDO::PARAM_STR);
     $stmt->bindParam(":firstName", $_POST['firstName'], PDO::PARAM_STR);
     $stmt->bindPARAM(":lastName", $_POST['lastName'], PDO::PARAM_STR);
     $stmt->bindParam(":furiganaFirstName", $_POST['furiganaFirstName'], PDO::PARAM_STR);

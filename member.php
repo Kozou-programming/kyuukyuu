@@ -13,7 +13,7 @@
 <?php echo
     $profiles = [
         'id' => $_POST['id'],
-        'password' => $_POST['password'],
+        'pass' => $_POST['pass'],
         'firstName' => $_POST['firstName'],
         'lastName' => $_POST['lastName'],
         'furiganaFirstName' => $_POST['furiganaFirstName'],
